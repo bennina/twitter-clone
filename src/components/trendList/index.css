@@ -1,0 +1,7 @@
+.TrendList {
+    padding: 2em;
+    background: antiquewhite;
+    width: calc(100% - 8em);
+    margin: 0 auto;
+    border-radius: 40px;
+}

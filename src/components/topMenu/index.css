@@ -1,0 +1,21 @@
+.TopMenu{
+  display: none;
+}
+.TopMenu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0px;
+  width: calc(100% - 60px);
+  padding: 0px 30px;
+}
+.TopMenu li img{
+  width: 40px;
+  height: auto;
+}
+@media screen and (max-width: 992px) {
+  .TopMenu{
+    display: block;
+  }
+}
