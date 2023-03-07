@@ -1,9 +1,22 @@
 import "./index.css";
+import { FiMenu } from "react-icons/fi";
+import { useState } from "react";
+import HamburgerMenu from "../hamburgerMenu";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const hamburgerTrigger = () => {
+    setShowMenu(!showMenu);
+
+    console.log(showMenu);
+  };
+
   return (
     <div className="Header">
       <div className="Header__up">
+        <FiMenu className="Header__hamburger" onClick={hamburgerTrigger} />
+        <HamburgerMenu showMenu={showMenu} />
         <p>Home</p>
         <img
           src="https://img.icons8.com/material-rounded/256/sparkling.png"

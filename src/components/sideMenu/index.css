@@ -1,33 +1,11 @@
 .SideMenu {
-  display: flex;
   flex-direction: column;
   align-items: start;
   border-right: 1px solid lightgrey;
   width: 25%;
   font-weight: bold;
   font-size: 0.9rem;
-}
-
-.SideMenu ul {
-  padding: 0 30px;
-  list-style-type: none;
-  width: calc(100% - 60px);
-}
-
-.SideMenu ul li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  cursor: pointer;
-}
-
-.SideMenu ul li:hover {
-  color: #01b5f1;
-}
-
-.SideMenu ul li img {
-  width: 25px;
-  height: 25px;
+  display: none;
 }
 
 .SideMenu button {
@@ -42,21 +20,8 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 992px) {
-  .SideMenu{
-    display: none;
-    position: absolute;
-    background: #fff;
-    height: 100%;
-    top: 0;
-    width: 40%;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-  }
-  .SideMenu ul {
-    padding: 0 30px;
-    list-style-type: none;
-    width: calc(100% - 60px);
-    flex-wrap: wrap;
+@media screen and (min-width: 800px) {
+  .SideMenu {
+    display: flex;
   }
 }

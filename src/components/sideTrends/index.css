@@ -1,6 +1,8 @@
 .SideTrends {
   border-left: 1px solid lightgrey;
   width: 30%;
+  display: none;
+
 }
 h2 {
   padding: 1em 2em;
@@ -8,17 +10,9 @@ h2 {
   font-weight: lighter;
   font-size: 20px;
 }
-
-@media screen and (max-width: 992px) {
+/* ATTENZIONE AL MOBILE FIRST */
+@media screen and (min-width: 991px) {
   .SideTrends {
-    display: none;
-    position: absolute;
-    background: #fff;
-    height: 100%;
-    top: 0;
-    width: 40%;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    right: 0;
+    display: block;
   }
 }

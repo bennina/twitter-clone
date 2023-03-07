@@ -1,12 +1,3 @@
 .Content {
-  width: 45%;
-}
-
-@media screen and (max-width: 992px) {
-  .Content {
-    width:100%;
-  }
-  .Header{
-    display: none;
-  }
+  width: 100%;
 }
