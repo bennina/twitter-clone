@@ -3,13 +3,17 @@ import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import HamburgerMenu from "../hamburgerMenu";
 
-const Header = () => {
+const Header = ({ setHeaderInputValue }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   const hamburgerTrigger = () => {
     setShowMenu(!showMenu);
+  };
 
-    console.log(showMenu);
+  const onHandleSubmit = (e) => {
+    e.preventDefault();
+    setHeaderInputValue(inputValue);
   };
 
   return (
@@ -29,7 +33,16 @@ const Header = () => {
           src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg"
           alt="profile"
         />
-        <input type="text" placeholder="What's happening?" />
+        <form onSubmit={onHandleSubmit}>
+          <input
+            type="text"
+            placeholder="Search something ..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            required
+          />
+          <input type="submit" value="Search" />
+        </form>
         <img src="https://img.icons8.com/fluency/256/image.png" alt="image" />
         <img src="https://img.icons8.com/arcade/256/gif.png" alt="gif" />
         <img

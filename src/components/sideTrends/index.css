@@ -1,17 +1,17 @@
 .SideTrends {
+  position: absolute;
+  width: 28%;
   border-left: 1px solid lightgrey;
   width: 30%;
   display: none;
+  right: 0;
+  overflow: scroll;
+  height: 100vh;
+  transition: all 0.35s;
+}
 
-}
-h2 {
-  padding: 1em 2em;
-  width: calc(100% - 4em);
-  font-weight: lighter;
-  font-size: 20px;
-}
 /* ATTENZIONE AL MOBILE FIRST */
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 800px) {
   .SideTrends {
     display: block;
   }
